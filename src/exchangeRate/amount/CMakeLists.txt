@@ -1,18 +1,18 @@
 cmake_minimum_required(VERSION 3.17)
 
-project(Currency VERSION 1.0.0)
+project(Amount VERSION 1.0.0)
 
-add_library(Currency
-    Currency.cc
+add_library(Amount
+    Amount.cc
 )
-add_library(Currency::Currency ALIAS Currency)
+add_library(ExchangeRate::Amount ALIAS Amount)
 
-target_include_directories(Currency
+target_include_directories(Amount
     PUBLIC
     ${rapidjson_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/include
 )
-set_target_properties(Currency
+set_target_properties(Amount
     PROPERTIES
     ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
     LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
