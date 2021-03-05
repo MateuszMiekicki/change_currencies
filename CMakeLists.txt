@@ -18,6 +18,10 @@ if (${ENABLE_TESTS})
     enable_testing()
 endif()
 
+include(FetchContent)
+include(${CMAKE_SOURCE_DIR}/cmake/cpr.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/date.cmake)
+
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(change_currencies_cli
     src/main.cc
