@@ -21,7 +21,7 @@ set_target_properties(ExchangeRate
 )
 add_subdirectory(amount)
 add_subdirectory(currency)
-target_link_libraries(Currency
+target_link_libraries(ExchangeRate
     PRIVATE
     ExchangeRate::Amount
     ExchangeRate::Currency
