@@ -1,12 +1,19 @@
 #ifndef Parser_hpp
 #define Parser_hpp
 
-template <typename ReturnType, typename ArgumentType>
+#include "../exchangeRate/Rate.hpp"
+#include "../exchangeRate/currency/Currency.hpp"
+#include <string>
+#include <utility>
+#include <vector>
+
 class Parser
 {
 public:
-    virtual ReturnType parse(ArgumentType argument) = 0;
-    virtual ReturnType getResult() const = 0;
+    virtual std::vector<std::pair<Currency,
+                                  Rate>>
+    parse(const std::string &argument) = 0;
+    virtual std::vector<std::pair<Currency, Rate>> getResult() const = 0;
     virtual ~Parser(){};
 };
 
