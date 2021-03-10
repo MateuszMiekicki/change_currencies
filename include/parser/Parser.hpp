@@ -4,16 +4,15 @@
 #include "../exchangeRate/Rate.hpp"
 #include "../exchangeRate/currency/Currency.hpp"
 #include <string>
-#include <utility>
-#include <vector>
+#include <unordered_map>
 
 class Parser
 {
 public:
-    virtual std::vector<std::pair<Currency,
-                                  Rate>>
+    virtual std::unordered_map<Currency,
+                               Rate>
     parse(const std::string &argument) = 0;
-    virtual std::vector<std::pair<Currency, Rate>> getResult() const = 0;
+    virtual std::unordered_map<Currency, Rate> getResult() const = 0;
     virtual ~Parser(){};
 };
 
