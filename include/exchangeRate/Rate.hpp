@@ -11,6 +11,7 @@ private:
 
 public:
     Rate() = default;
+    Rate(const Amount &bid, const Amount &ask);
     Rate(const Rate &rate) = default;
     Rate &operator=(const Rate &rate) = default;
     Rate(Rate &&rate) = default;

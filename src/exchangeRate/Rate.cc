@@ -1,6 +1,11 @@
 #include "exchangeRate/Rate.hpp"
 #include "exchangeRate/amount/Amount.hpp"
 
+Rate::Rate(const Amount &bid, const Amount &ask) : _bid{bid},
+                                                   _ask{ask}
+{
+}
+
 void Rate::setBid(const Amount &bid)
 {
     _bid = bid;
