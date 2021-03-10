@@ -2,6 +2,10 @@
 #include <functional>
 #include <string>
 
+Currency::Currency(const char *code) : _code{code}
+{
+}
+
 Currency::Currency(const std::string &code) : _code{code}
 {
 }
