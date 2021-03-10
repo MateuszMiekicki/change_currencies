@@ -16,6 +16,9 @@ public:
 
     void setAmount(const double amount);
     double getAmount() const;
+
+    bool operator<=>(const Amount &other) const = default;
+    bool operator==(const double other) const;
 };
 
 #endif

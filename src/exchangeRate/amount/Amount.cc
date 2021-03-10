@@ -14,3 +14,8 @@ double Amount::getAmount() const
 {
     return _amount;
 }
+
+bool Amount::operator==(const double other) const
+{
+    return _amount == other;
+}
