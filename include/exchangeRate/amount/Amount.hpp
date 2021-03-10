@@ -8,7 +8,7 @@ private:
 
 public:
     Amount() = default;
-    Amount(const double code);
+    Amount(const double amount);
     Amount(const Amount &amount) = default;
     Amount &operator=(const Amount &amount) = default;
     Amount(Amount &&amount) = default;
