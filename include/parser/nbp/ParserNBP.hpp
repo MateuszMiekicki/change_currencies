@@ -1,8 +1,8 @@
 #ifndef ParserNBP_hpp
 #define ParserNBP_hpp
 
-#include "../exchangeRate/Rate.hpp"
-#include "../exchangeRate/currency/Currency.hpp"
+#include "../../exchangeRate/Rate.hpp"
+#include "../../exchangeRate/currency/Currency.hpp"
 #include "parser/Parser.hpp"
 #include <string>
 #include <unordered_map>
