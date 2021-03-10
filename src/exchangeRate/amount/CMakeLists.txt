@@ -9,7 +9,6 @@ add_library(ExchangeRate::Amount ALIAS Amount)
 
 target_include_directories(Amount
     PUBLIC
-    ${rapidjson_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/include
 )
 set_target_properties(Amount

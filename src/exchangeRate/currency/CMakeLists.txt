@@ -9,7 +9,6 @@ add_library(ExchangeRate::Currency ALIAS Currency)
 
 target_include_directories(Currency
     PUBLIC
-    ${rapidjson_SOURCE_DIR}/include
     ${CMAKE_SOURCE_DIR}/include
 )
 set_target_properties(Currency
