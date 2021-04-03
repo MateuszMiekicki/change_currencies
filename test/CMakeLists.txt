@@ -3,11 +3,14 @@ cmake_minimum_required(VERSION 3.17)
 project(change_currencies_test VERSION 1.0.0)
 
 include(FetchContent)
-include(cmake/googletest.cmake)
+include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/googletest.cmake)
+
+include(${CMAKE_CURRENT_SOURCE_DIR}/parserTests/parserTests.cmake)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(change_currencies_test
     main.cc
+    ${Parser_tests}
 )
 set_target_properties(change_currencies_test
     PROPERTIES
@@ -18,6 +21,10 @@ set_target_properties(change_currencies_test
 target_link_libraries(change_currencies_test
     PRIVATE
     gtest gtest_main
+    ExchangeRate::ExchangeRate
+    ExchangeRate::Amount
+    ExchangeRate::Currency
+    Parser::NBP
 )
 
 if(MSVC)

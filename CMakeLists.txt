@@ -21,6 +21,12 @@ endif()
 include(FetchContent)
 include(${CMAKE_SOURCE_DIR}/cmake/cpr.cmake)
 include(${CMAKE_SOURCE_DIR}/cmake/date.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/rapidjson.cmake)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/parser/nbp)
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/parser/exception)
+
+add_subdirectory(${CMAKE_SOURCE_DIR}/src/exchangeRate)
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 add_executable(change_currencies_cli
