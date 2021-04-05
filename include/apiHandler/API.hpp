@@ -24,6 +24,7 @@ public:
     virtual std::pair<date::year_month_day,
                       date::year_month_day>
     getRangeDate() const = 0;
+    ~API() {}
 };
 
 #endif
